@@ -5,7 +5,7 @@ import com.codeclan.example.PetApp.models.Business;
 import com.codeclan.example.PetApp.models.Service;
 import org.springframework.data.rest.core.config.Projection;
 
-@Projection(name="embedPetOwner", types = Service.class)
+@Projection(name="embedService", types = Service.class)
 public interface EmbedService {
 
     Long getId();

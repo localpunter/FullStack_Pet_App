@@ -1,13 +1,7 @@
 package com.codeclan.example.PetApp.components;
 
-import com.codeclan.example.PetApp.models.Business;
-import com.codeclan.example.PetApp.models.Pet;
-import com.codeclan.example.PetApp.models.PetOwner;
-import com.codeclan.example.PetApp.models.Service;
-import com.codeclan.example.PetApp.repository.BusinessRepository;
-import com.codeclan.example.PetApp.repository.PetOwnerRepository;
-import com.codeclan.example.PetApp.repository.PetRepository;
-import com.codeclan.example.PetApp.repository.ServiceRepository;
+import com.codeclan.example.PetApp.models.*;
+import com.codeclan.example.PetApp.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -27,6 +21,9 @@ public class DataLoader implements ApplicationRunner {
 
     @Autowired
     ServiceRepository serviceRepository;
+
+    @Autowired
+    BookingRepository bookingRepository;
 
     public DataLoader() {
     }
@@ -62,6 +59,14 @@ public class DataLoader implements ApplicationRunner {
         business1.addService(service2);
 
         businessRepository.save(business1);
+
+        Booking booking1 = new Booking("04/10/2018", pet1, service1);
+        bookingRepository.save(booking1);
+        service1.addBooking(booking1);
+        pet1.addBooking(booking1);
+
+        bookingRepository.save(booking1);
+
 
 
 
