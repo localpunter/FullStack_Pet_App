@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
 import Request from '../../helpers/request.js';
+import BusinessContainerBookingList from './BusinessContainerBookingList.js';
+import BusinessContainerServiceList from './BusinessContainerServiceList.js';
+import NavBarBusinessContainer from '../../navbars/NavBarBusinessContainer.js';
 
 class BusinessContainer extends Component {
   constructor(props) {
@@ -31,6 +34,7 @@ class BusinessContainer extends Component {
     return(
       <div>
         <h2>Hello {businessName}</h2>
+        <NavBarBusinessContainer />
       </div>
     )
   }

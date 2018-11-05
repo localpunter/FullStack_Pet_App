@@ -4,6 +4,8 @@ import NavBarHome from './navbars/NavBarHome';
 import './App.css';
 import PetOwnerContainer from './containers/petowners/PetOwnerContainer';
 import BusinessContainer from './containers/businesses/BusinessContainer';
+import BusinessContainerServiceList from './containers/businesses/BusinessContainerServiceList';
+import BusinessContainerBookingList from './containers/businesses/BusinessContainerBookingList';
 
 class App extends Component {
   render() {
@@ -14,6 +16,8 @@ class App extends Component {
         <Switch>
           <Route exact path = '/petowners' component={PetOwnerContainer}/>
           <Route exact path = '/businesses' component={BusinessContainer}/>
+          <Route exact path = '/businesses/servicelist' component={BusinessContainerServiceList}/>
+          <Route exact path = '/businesses/bookinglist' component={BusinessContainerBookingList}/>
         </Switch>
         </React.Fragment>
       </Router>

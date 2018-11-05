@@ -10,7 +10,7 @@ const NavBarBusinessContainer = (props) => {
         </li>
 
         <li className="navLink">
-          <Link to="/businesses/bookingslist">Show Bookings</Link>
+          <Link to="/businesses/bookinglist">Show Bookings</Link>
         </li>
       </ul>
     </header>
