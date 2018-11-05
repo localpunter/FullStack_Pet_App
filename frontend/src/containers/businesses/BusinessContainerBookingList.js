@@ -9,8 +9,11 @@ class BusinessContainerBookingList extends Component {
   }
 
   componentDidMount() {
-
-  }
+    let request = new Request();
+      request.get('/api/bookings').then((bookings) => {
+        this.setState({bookings: bookings._embedded.bookings})
+      })
+    }
 
   render() {
 

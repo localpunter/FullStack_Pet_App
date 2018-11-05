@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Request from '../../helpers/request.js';
 import NavBarBusinessContainer from '../../navbars/NavBarBusinessContainer.js';
+import BusinessServiceList from '../../components/BusinessServiceList';
 
 class BusinessContainerServiceList extends Component {
   constructor(props) {
@@ -9,15 +10,18 @@ class BusinessContainerServiceList extends Component {
   }
 
   componentDidMount() {
-
-  }
-
+    let request = new Request();
+      request.get('/api/services').then((services) => {
+        this.setState({services: services._embedded.services})
+      })
+    }
   render() {
 
     return(
       <div>
         <NavBarBusinessContainer />
         <h2>Business Container Service List</h2>
+        <BusinessServiceList services={this.state.services} />
       </div>
     )
   }

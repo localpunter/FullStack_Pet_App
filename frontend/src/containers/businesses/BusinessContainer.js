@@ -8,8 +8,7 @@ class BusinessContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      businesses: [],
-      services: null
+      businesses: []
     }
   }
 
@@ -17,13 +16,7 @@ class BusinessContainer extends Component {
     let request = new Request()
     request.get('/api/businesses').then((businesses) => {
       this.setState({businesses: businesses._embedded.businesses})
-    }).then(() => {
-      request.get('/api/services').then((services) => {
-        this.setState({services: services._embedded.services})
-      })
     })
-
-
   }
 
   render() {
