@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import SingleBusinessServiceContainer from '../../containers/businesses/SingleBusinessServiceContainer'
 
 const Service = (props) => {
 
@@ -9,7 +10,9 @@ const Service = (props) => {
 
   return(
     <React.Fragment>
-      <p>{props.service.type} </p>
+      <Link to = {"/businesses/service/:id" + props.service.id} >
+        <p>{props.service.type} </p>
+        </Link>
     </React.Fragment>
 
   )

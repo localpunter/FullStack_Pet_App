@@ -7,6 +7,7 @@ import BusinessContainer from './containers/businesses/BusinessContainer';
 import BusinessContainerServiceList from './containers/businesses/BusinessContainerServiceList';
 import BusinessContainerBookingList from './containers/businesses/BusinessContainerBookingList';
 import BusinessServiceFormContainer from './containers/businesses/BusinessServiceFormContainer';
+import SingleBusinessServiceContainer from './containers/businesses/SingleBusinessServiceContainer';
 
 class App extends Component {
   render() {
@@ -20,6 +21,11 @@ class App extends Component {
           <Route exact path = '/businesses/servicelist' component={BusinessContainerServiceList}/>
           <Route exact path = '/businesses/bookinglist' component={BusinessContainerBookingList}/>
           <Route exact path = '/businesses/createservice' component={BusinessServiceFormContainer}/>
+          <Route exact path="/businesses/service/:id" render = {(props) =>{
+            const id = props.match.params.id;
+            return <SingleBusinessServiceContainer id = {id} />
+            }}
+          />
         </Switch>
         </React.Fragment>
       </Router>
