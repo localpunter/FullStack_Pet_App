@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Request from '../../helpers/request.js';
 import NavBarBusinessContainer from '../../navbars/NavBarBusinessContainer.js';
-import BusinessBookingList from '../../components/BusinessBookingList';
+import BusinessBookingList from '../../components/businesses/BusinessBookingList';
 
 class BusinessContainerBookingList extends Component {
   constructor(props) {

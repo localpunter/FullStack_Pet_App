@@ -5,6 +5,10 @@ const NavBarBusinessContainer = (props) => {
   return (
     <header>
       <ul>
+      <li className="navLink">
+        <Link to="/businesses/createservice">Create Service</Link>
+      </li>
+
         <li className="navLink">
           <Link to="/businesses/servicelist">Show Services</Link>
         </li>
@@ -12,6 +16,9 @@ const NavBarBusinessContainer = (props) => {
         <li className="navLink">
           <Link to="/businesses/bookinglist">Show Bookings</Link>
         </li>
+
+
+
       </ul>
     </header>
   )
