@@ -2,6 +2,8 @@ package com.codeclan.example.PetApp.models;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -22,8 +24,9 @@ public class Service {
     @Column(name = "type")
     private String type;
 
-    @JsonIgnore
+    @JsonIgnoreProperties("services")
     @ManyToOne
+//    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)   ??? REQUIRED
     @JoinColumn(name = "business_id", nullable = false)
     Business business;
 

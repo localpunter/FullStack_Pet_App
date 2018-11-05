@@ -15,7 +15,6 @@ class BusinessServiceFormContainer extends Component {
   }
 
   componentDidMount() {
-    console.log("componentDidMount");
     const request = new Request();
       request.get('/api/services').then((services) => {
         this.setState({services: services._embedded.services})
@@ -27,16 +26,13 @@ class BusinessServiceFormContainer extends Component {
   }
 
   handleServicePost(service) {
-    console.log("handleServicePost");
-    console.log("service:", service);
     const request = new Request();
-    request.post('api/businesses', service).then(() => {
-      // window.location = '/businesses/servicelist'
+    request.post('/api/services', service).then(() => {
+      window.location = '/businesses/servicelist'
     })
   }
 
   render() {
-    console.log("renderBusinessServiceContainer");
 
     return(
       <div>

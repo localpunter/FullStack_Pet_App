@@ -1,6 +1,7 @@
 package com.codeclan.example.PetApp.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -18,6 +19,7 @@ public class Business {
     private String name;
 
     @JsonIgnore
+//    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)   ??? REQUIRED
     @OneToMany(mappedBy = "business", fetch = FetchType.LAZY)
     private List<Service> serviceList;
 

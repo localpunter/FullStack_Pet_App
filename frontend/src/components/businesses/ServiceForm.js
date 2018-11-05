@@ -2,19 +2,11 @@ import React from 'react';
 
 const ServiceForm = (props) => {
   function handleSubmit(event) {
-    // console.log("before preventDefault");
     event.preventDefault();
-    // console.log("after preventDefault");
     const service = {
       "type": event.target.type.value,
-      "business": "http://localhost:8080/api/businesses/1"
+      "business": "http://localhost:8080/api/businesses/1{?projection}"
     }
-    console.log("handleSubmit");
-
-
-
-    console.log("props:", props.businesses[0]._links);
-    console.log("type", event.target.type.value);
     props.handleServicePost(service);
 
   }
