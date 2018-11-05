@@ -6,15 +6,17 @@ class BusinessContainer extends Component {
     super(props);
     this.state = {
       businesses: [],
-      // services: []
+      services: null
     }
   }
 
   componentDidMount() {
     let request = new Request()
-    request.get('/api/businesses').then((data) => {
-      this.setState({businesses: data._embedded.businesses})
+    request.get('/api/businesses').then((businesses) => {
+      this.setState({businesses: businesses._embedded.businesses})
     })
+
+
   }
 
   render() {
