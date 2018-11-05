@@ -10,6 +10,7 @@ import java.util.List;
 @Entity
 @Table(name = "petowners")
 public class PetOwner {
+
     @Column(name = "name")
     private String name;
 
