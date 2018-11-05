@@ -14,15 +14,23 @@ class BusinessContainer extends Component {
     let request = new Request()
     request.get('/api/businesses').then((businesses) => {
       this.setState({businesses: businesses._embedded.businesses})
+    }).then(() => {
+      request.get('/api/services').then((services) => {
+        this.setState({services: services._embedded.services})
+      })
     })
 
 
   }
 
   render() {
+    let businessName = null;
+    (this.state.businesses.length>0) ? businessName = this.state.businesses[0].name : businessName = "";
+
+
     return(
       <div>
-      Hello Business owner!
+        <h2>Hello {businessName}</h2>
       </div>
     )
   }

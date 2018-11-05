@@ -15,21 +15,21 @@ public class PetOwnerRepositoryImpl implements PetOwnerRepositoryCustom {
     @Autowired
     EntityManager entityManager;
 
-    @Transactional
-    public List<PetOwner> allPetOwners(){
-        List<PetOwner> petOwners = null;
-        Session session = entityManager.unwrap(Session.class);
-
-        try {
-            Criteria cr = session.createCriteria(PetOwner.class);
-            petOwners = cr.list();
-        } catch (HibernateException e) {
-            e.printStackTrace();
-        } finally {
-            session.close();
-        }
-
-
-        return petOwners;
-    }
+//    @Transactional
+//    public List<PetOwner> allPetOwners(){
+//        List<PetOwner> petOwners = null;
+//        Session session = entityManager.unwrap(Session.class);
+//
+//        try {
+//            Criteria cr = session.createCriteria(PetOwner.class);
+//            petOwners = cr.list();
+//        } catch (HibernateException e) {
+//            e.printStackTrace();
+//        } finally {
+//            session.close();
+//        }
+//
+//
+//        return petOwners;
+//    }
 }

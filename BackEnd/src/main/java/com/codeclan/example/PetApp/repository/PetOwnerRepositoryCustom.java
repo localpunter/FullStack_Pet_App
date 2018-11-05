@@ -5,5 +5,5 @@ import com.codeclan.example.PetApp.models.PetOwner;
 import java.util.List;
 
 public interface PetOwnerRepositoryCustom {
-    List<PetOwner> allPetOwners();
+//    List<PetOwner> allPetOwners();
 }
