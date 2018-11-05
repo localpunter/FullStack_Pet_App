@@ -10,7 +10,7 @@ import java.util.List;
 @Projection(name="embedBusiness", types = Business.class)
 public interface EmbedBusiness {
 
-    long getId();
+    Long getId();
     String getName();
     List<Service> getServiceList();
 }

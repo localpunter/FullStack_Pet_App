@@ -10,7 +10,7 @@ import java.util.List;
 @Projection(name="embedPetOwner", types = PetOwner.class)
 public interface EmbedPetOwner {
 
-    long getId();
+    Long getId();
     String getName();
     List<Pet> getPets();
 }
