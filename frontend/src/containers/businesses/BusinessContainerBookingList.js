@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Request from '../../helpers/request.js';
 import NavBarBusinessContainer from '../../navbars/NavBarBusinessContainer.js';
+import BusinessBookingList from '../../components/BusinessBookingList';
 
 class BusinessContainerBookingList extends Component {
   constructor(props) {
@@ -21,6 +22,7 @@ class BusinessContainerBookingList extends Component {
       <div>
         <NavBarBusinessContainer />
         <h2>Business Container Booking List</h2>
+        <BusinessBookingList bookings={this.state.bookings} />
       </div>
     )
   }
