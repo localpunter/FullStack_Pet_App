@@ -26,7 +26,7 @@ public class Service {
 
     @JsonIgnoreProperties("services")
     @ManyToOne
-//    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)   ??? REQUIRED
+    @Cascade(org.hibernate.annotations.CascadeType.REMOVE)
     @JoinColumn(name = "business_id", nullable = false)
     Business business;
 
