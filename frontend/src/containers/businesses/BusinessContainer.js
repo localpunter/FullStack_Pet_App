@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Request from '../../helpers/request.js';
-import BusinessContainerBookingList from './BusinessContainerBookingList.js';
+import BusinessBookingListContainer from './BusinessBookingListContainer.js';
 import BusinessContainerServiceList from './BusinessContainerServiceList.js';
 import NavBarBusinessContainer from '../../navbars/NavBarBusinessContainer.js';
 

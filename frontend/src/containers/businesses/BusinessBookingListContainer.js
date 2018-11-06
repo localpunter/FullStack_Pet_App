@@ -3,7 +3,7 @@ import Request from '../../helpers/request.js';
 import NavBarBusinessContainer from '../../navbars/NavBarBusinessContainer.js';
 import BusinessBookingList from '../../components/businesses/BusinessBookingList';
 
-class BusinessContainerBookingList extends Component {
+class BusinessBookingListContainer extends Component {
   constructor(props) {
     super(props);
     this.state = { bookings: [] }
@@ -28,4 +28,4 @@ class BusinessContainerBookingList extends Component {
   }
 }
 
-export default BusinessContainerBookingList;
+export default BusinessBookingListContainer;
