@@ -26,7 +26,7 @@ public class Pet {
     private Long id;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "pet", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "pet", fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
     private List<Booking> bookings;
 
     public Pet(){

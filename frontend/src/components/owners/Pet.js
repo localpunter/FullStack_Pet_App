@@ -9,7 +9,9 @@ const Pet = (props) => {
 
   return(
     <React.Fragment>
-        <p>Pet Name: {props.pet.name} </p>
+        <Link to = {"/owners/pet/" + props.pet.id} >
+          <p>Pet Name: {props.pet.name} </p>
+        </Link>
     </React.Fragment>
 
   )
