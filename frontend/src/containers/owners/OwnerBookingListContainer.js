@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Request from '../../helpers/request.js';
 import NavBarOwnerContainer from '../../navbars/NavBarOwnerContainer';
-
+import OwnerBookingList from '../../components/owners/OwnerBookingList.js'
 
 class OwnerBookingListContainer extends Component {
   constructor(props) {
@@ -22,7 +22,7 @@ class OwnerBookingListContainer extends Component {
       <div>
         <NavBarOwnerContainer />
         <h2>Owner Container Booking List</h2>
-        {/* <OwnerBookingList bookings={this.state.bookings} /> */}
+        <OwnerBookingList bookings={this.state.bookings} />
       </div>
     )
   }
