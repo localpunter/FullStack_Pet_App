@@ -4,7 +4,7 @@ import NavBarHome from './navbars/NavBarHome';
 import './App.css';
 import PetOwnerContainer from './containers/petowners/PetOwnerContainer';
 import BusinessContainer from './containers/businesses/BusinessContainer';
-import BusinessContainerServiceList from './containers/businesses/BusinessContainerServiceList';
+import BusinessServiceListContainer from './containers/businesses/BusinessServiceListContainer';
 import BusinessBookingListContainer from './containers/businesses/BusinessBookingListContainer';
 import BusinessServiceFormContainer from './containers/businesses/BusinessServiceFormContainer';
 import SingleBusinessServiceContainer from './containers/businesses/SingleBusinessServiceContainer';
@@ -19,7 +19,7 @@ class App extends Component {
         <Switch>
           <Route exact path = '/petowners' component={PetOwnerContainer}/>
           <Route exact path = '/businesses' component={BusinessContainer}/>
-          <Route exact path = '/businesses/servicelist' component={BusinessContainerServiceList}/>
+          <Route exact path = '/businesses/servicelist' component={BusinessServiceListContainer}/>
           <Route exact path = '/businesses/bookinglist' component={BusinessBookingListContainer}/>
           <Route exact path = '/businesses/createservice' component={BusinessServiceFormContainer}/>
           <Route exact path = '/petowners/bookinglist' component={PetOwnerBookingListContainer}/>
