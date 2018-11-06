@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Request from '../../helpers/request.js';
-import NavBarOwnerContainer from '../../navbars/NavBarOwnerContainer';
+import NavBarOwnerContainer from '../../navbars/NavBarOwnerContainer.js';
 import OwnerBookingList from '../../components/owners/OwnerBookingList.js'
 
 class OwnerBookingListContainer extends Component {
