@@ -3,7 +3,7 @@ import Request from '../../helpers/request.js';
 import NavBarBusinessContainer from '../../navbars/NavBarBusinessContainer.js';
 import BusinessServiceList from '../../components/businesses/BusinessServiceList';
 
-class BusinessContainerServiceList extends Component {
+class BusinessServiceListContainer extends Component {
   constructor(props) {
     super(props);
     this.state = { services: [] }
@@ -27,4 +27,4 @@ class BusinessContainerServiceList extends Component {
   }
 }
 
-export default BusinessContainerServiceList;
+export default BusinessServiceListContainer;

@@ -6,6 +6,7 @@ const NavBarPetOwnerContainer = (props) => {
     <header>
       <ul>
       <li className="navLink">
+<<<<<<< HEAD
         <Link to="/petowners/addpet">Add Pet</Link>
       </li>
 
@@ -19,6 +20,10 @@ const NavBarPetOwnerContainer = (props) => {
 
 
 
+=======
+        <Link to="/petowners/bookinglist">Show Bookings</Link>
+      </li>
+>>>>>>> c8abf328fcf0b5c990c6c9d036ddd9ecb9a23391
       </ul>
     </header>
   )
