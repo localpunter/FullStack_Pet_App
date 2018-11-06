@@ -6,7 +6,7 @@ const NavBarHome = (props) => {
     <header>
       <ul>
         <li className="navLink">
-          <Link to="/petowners">Pet Owner</Link>
+          <Link to="/owners">Pet Owner</Link>
         </li>
 
         <li className="navLink">

@@ -14,7 +14,7 @@ public class DataLoader implements ApplicationRunner {
     PetRepository petRepository;
 
     @Autowired
-    PetOwnerRepository petOwnerRepository;
+    OwnerRepository ownerRepository;
 
     @Autowired
     BusinessRepository businessRepository;
@@ -31,21 +31,21 @@ public class DataLoader implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
 
-        PetOwner petOwner1 = new PetOwner("Han Solo");
-        petOwnerRepository.save(petOwner1);
+        Owner owner1 = new Owner("Han Solo");
+        ownerRepository.save(owner1);
 
-//        PetOwner petOwner2 = new PetOwner("Vito Corleone");
-//        petOwnerRepository.save(petOwner2);
+//        Owner owner2 = new Owner("Vito Corleone");
+//        ownerRepository.save(owner2);
 
-        Pet pet1 = new Pet("Chewbacca", "Dog", petOwner1);
+        Pet pet1 = new Pet("Chewbacca", "Dog", owner1);
         petRepository.save(pet1);
-        petOwner1.addPet(pet1);
-        petOwnerRepository.save(petOwner1);
+        owner1.addPet(pet1);
+        ownerRepository.save(owner1);
 
-        Pet pet2 = new Pet("Luke", "Cat", petOwner1);
+        Pet pet2 = new Pet("Luke", "Cat", owner1);
         petRepository.save(pet2);
-        petOwner1.addPet(pet2);
-        petOwnerRepository.save(petOwner1);
+        owner1.addPet(pet2);
+        ownerRepository.save(owner1);
 
         Business business1 = new Business("Animals world");
         businessRepository.save(business1);

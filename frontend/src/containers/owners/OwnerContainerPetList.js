@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import Request from '../../helpers/request.js';
-import NavBarPetOwnerContainer from '../../navbars/NavBarPetOwnerContainer.js';
-import PetOwnerPetList from '../../components/petowners/PetOwnerPetList';
+import NavBarOwnerContainer from '../../navbars/NavBarOwnerContainer.js';
+import OwnerPetList from '../../components/owners/OwnerPetList';
 
-class PetOwnerPetListContainer extends Component {
+class OwnerPetListContainer extends Component {
   constructor(props) {
     super(props);
     this.state = { pets: [] }
@@ -19,12 +19,12 @@ class PetOwnerPetListContainer extends Component {
 
     return(
       <div>
-        <NavBarPetOwnerContainer />
-        <h2>PetOwner Container Service List</h2>
-        <PetOwnerPetList pets={this.state.pets} />
+        <NavBarOwnerContainer />
+        <h2>Owner Container Service List</h2>
+        <OwnerPetList pets={this.state.pets} />
       </div>
     )
   }
 }
 
-export default PetOwnerPetListContainer;
+export default OwnerPetListContainer;

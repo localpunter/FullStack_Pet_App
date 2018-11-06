@@ -2,15 +2,15 @@ import React, { Component } from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import NavBarHome from './navbars/NavBarHome';
 import './App.css';
-import PetOwnerContainer from './containers/petowners/PetOwnerContainer';
-import PetOwnerContainerPetList from './containers/petowners/PetOwnerContainerPetList';
-import PetOwnerAddPetFormContainer from './containers/petowners/PetOwnerAddPetFormContainer';
+import OwnerContainer from './containers/owners/OwnerContainer';
+import OwnerContainerPetList from './containers/owners/OwnerContainerPetList';
+import OwnerAddPetFormContainer from './containers/owners/OwnerAddPetFormContainer';
 import BusinessContainer from './containers/businesses/BusinessContainer';
 import BusinessServiceListContainer from './containers/businesses/BusinessServiceListContainer';
 import BusinessBookingListContainer from './containers/businesses/BusinessBookingListContainer';
 import BusinessServiceFormContainer from './containers/businesses/BusinessServiceFormContainer';
 import SingleBusinessServiceContainer from './containers/businesses/SingleBusinessServiceContainer';
-import PetOwnerBookingListContainer from './containers/petowners/PetOwnerBookingListContainer';
+import OwnerBookingListContainer from './containers/owners/OwnerBookingListContainer';
 
 class App extends Component {
   render() {
@@ -19,15 +19,15 @@ class App extends Component {
         <React.Fragment>
         <NavBarHome />
         <Switch>
-          <Route exact path = '/petowners' component={PetOwnerContainer}/>
+          <Route exact path = '/owners' component={OwnerContainer}/>
           <Route exact path = '/businesses' component={BusinessContainer}/>
           <Route exact path = '/businesses/servicelist' component={BusinessServiceListContainer}/>
           <Route exact path = '/businesses/bookinglist' component={BusinessBookingListContainer}/>
           <Route exact path = '/businesses/createservice' component={BusinessServiceFormContainer}/>
 
-          <Route exact path = '/petowners/petlist' component={PetOwnerContainerPetList}/>
-          <Route exact path = '/petowners/addpet' component={PetOwnerAddPetFormContainer}/>
-          <Route exact path = '/petowners/bookinglist' component={PetOwnerBookingListContainer}/>
+          <Route exact path = '/owners/petlist' component={OwnerContainerPetList}/>
+          <Route exact path = '/owners/addpet' component={OwnerAddPetFormContainer}/>
+          <Route exact path = '/owners/bookinglist' component={OwnerBookingListContainer}/>
           <Route exact path="/businesses/service/:id" render = {(props) =>{
             const id = props.match.params.id;
             return <SingleBusinessServiceContainer id = {id} />

@@ -1,7 +1,7 @@
 import React from 'react';
 import Booking from './Booking.js';
 
-const PetOwnerBookingList = (props) => {
+const OwnerBookingList = (props) => {
   const bookings = props.bookings.map((booking) => {
     return (
       <li key={booking.id}>
@@ -15,4 +15,4 @@ const PetOwnerBookingList = (props) => {
 }
 
 
-export default PetOwnerBookingList;
+export default OwnerBookingList;

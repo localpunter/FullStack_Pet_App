@@ -1,6 +1,7 @@
 package com.codeclan.example.PetApp.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -15,14 +16,14 @@ public class Pet {
     @Column(name = "type")
     private String type;
 
-    @JsonIgnore
+    @JsonIgnoreProperties("pets")
     @ManyToOne
     @JoinColumn(name = "pet_owner_id", nullable = false)
-    private PetOwner petOwner;
+    private Owner owner;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
+    private Long id;
 
     @JsonIgnore
     @OneToMany(mappedBy = "pet", fetch = FetchType.LAZY)
@@ -31,10 +32,10 @@ public class Pet {
     public Pet(){
     }
 
-    public Pet(String name, String type, PetOwner petOwner){
+    public Pet(String name, String type, Owner owner){
         this.name = name;
         this.type = type;
-        this.petOwner = petOwner;
+        this.owner = owner;
         this.bookings = new ArrayList<>();
     }
 
@@ -54,20 +55,20 @@ public class Pet {
         this.type = type;
     }
 
-    public PetOwner getPetOwner() {
-        return petOwner;
+    public Owner getOwner() {
+        return owner;
     }
 
-    public void setPetOwner(PetOwner petOwner) {
-        this.petOwner = petOwner;
+    public void setOwner(Owner owner) {
+        this.owner = owner;
     }
 
     public Long getId() {
-        return Id;
+        return id;
     }
 
     public void setId(Long id) {
-        Id = id;
+        this.id = id;
     }
 
     public List<Booking> getBookings() {

@@ -1,14 +1,14 @@
 import React, {Component} from 'react';
 import Request from '../../helpers/request.js';
-import NavBarBusinessContainer from '../../navbars/NavBarPetOwnerContainer.js';
-import PetForm from '../../components/petowners/PetForm';
+import NavBarBusinessContainer from '../../navbars/NavBarOwnerContainer.js';
+import PetForm from '../../components/owners/PetForm';
 
-class PetOwnerAddPetFormContainer extends Component {
+class OwnerAddPetFormContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
       pets: [],
-      petowners: []
+      owners: []
     }
 
     this.handlePetPost = this.handlePetPost.bind(this);
@@ -21,9 +21,9 @@ class PetOwnerAddPetFormContainer extends Component {
           this.setState({pets: pets._embedded.pets})
         })
       .then(() => {
-          request.get('/api/petOwners')
-            .then((petowners) => {
-              this.setState({petowners: petowners._embedded.petOwners})
+          request.get('/api/owners')
+            .then((owners) => {
+              this.setState({owners: owners._embedded.owners})
             })
         })
 
@@ -34,7 +34,7 @@ class PetOwnerAddPetFormContainer extends Component {
     const request = new Request();
     request.post('http://localhost:3000/api/pets', pet)
     .then(() => {
-      // window.location = '/petowners/petlist'
+      window.location = '/owners/petlist'
     })
   }
 
@@ -44,7 +44,7 @@ class PetOwnerAddPetFormContainer extends Component {
       <div>
       <PetForm
       pets = {this.state.pets}
-      petowners={this.state.petowners}
+      owners={this.state.owners}
       handlePetPost={this.handlePetPost}
       />
       </div>
@@ -52,4 +52,4 @@ class PetOwnerAddPetFormContainer extends Component {
 
 }
 
-export default PetOwnerAddPetFormContainer;
+export default OwnerAddPetFormContainer;

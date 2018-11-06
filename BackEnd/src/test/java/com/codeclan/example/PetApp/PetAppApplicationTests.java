@@ -2,10 +2,10 @@ package com.codeclan.example.PetApp;
 
 import com.codeclan.example.PetApp.models.Business;
 import com.codeclan.example.PetApp.models.Pet;
-import com.codeclan.example.PetApp.models.PetOwner;
+import com.codeclan.example.PetApp.models.Owner;
 import com.codeclan.example.PetApp.models.Service;
 import com.codeclan.example.PetApp.repository.BusinessRepository;
-import com.codeclan.example.PetApp.repository.PetOwnerRepository;
+import com.codeclan.example.PetApp.repository.OwnerRepository;
 import com.codeclan.example.PetApp.repository.PetRepository;
 import com.codeclan.example.PetApp.repository.ServiceRepository;
 import org.junit.Test;
@@ -24,7 +24,7 @@ public class PetAppApplicationTests {
 	PetRepository petRepository;
 
 	@Autowired
-	PetOwnerRepository petOwnerRepository;
+	OwnerRepository ownerRepository;
 
 	@Autowired
 	BusinessRepository businessRepository;
@@ -37,13 +37,13 @@ public class PetAppApplicationTests {
 	}
 
 	@Test
-	public void canSavePetOwner() {
-		PetOwner petOwner = new PetOwner("Andrew");
-		petOwnerRepository.save(petOwner);
-		Pet pet = new Pet("Fido", "Dog", petOwner);
+	public void canSaveOwner() {
+		Owner owner = new Owner("Andrew");
+		ownerRepository.save(owner);
+		Pet pet = new Pet("Fido", "Dog", owner);
 		petRepository.save(pet);
-		petOwner.addPet(pet);
-		petOwnerRepository.save(petOwner);
+		owner.addPet(pet);
+		ownerRepository.save(owner);
 	}
 
 	@Test

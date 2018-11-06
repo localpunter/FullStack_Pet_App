@@ -1,34 +1,32 @@
 package com.codeclan.example.PetApp.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "petowners")
-public class PetOwner {
+@Table(name = "owners")
+public class Owner {
 
     @Column(name = "name")
     private String name;
 
     @JsonIgnore
-    @Cascade(org.hibernate.annotations.CascadeType.DELETE)
-    @OneToMany(mappedBy = "petOwner", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "owner", fetch = FetchType.LAZY)
     private List<Pet> pets;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
+    private Long id;
 
-    public PetOwner(){
-    }
-
-    public PetOwner(String name){
+    public Owner(String name){
         this.name = name;
         this.pets = new ArrayList<>();
+    }
+
+    public Owner(){
     }
 
     public String getName() {
@@ -48,11 +46,11 @@ public class PetOwner {
     }
 
     public Long getId() {
-        return Id;
+        return id;
     }
 
     public void setId(Long id) {
-        Id = id;
+        this.id = id;
     }
 
     public void addPet(Pet pet) {

@@ -1,7 +1,7 @@
 import React from 'react';
 import Pet from './Pet.js';
 
-const PetOwnerPetList = (props) => {
+const OwnerPetList = (props) => {
   const pets = props.pets.map((pet) => {
     return (
       <li key={pet.id}>
@@ -15,4 +15,4 @@ const PetOwnerPetList = (props) => {
 }
 
 
-export default PetOwnerPetList;
+export default OwnerPetList;
