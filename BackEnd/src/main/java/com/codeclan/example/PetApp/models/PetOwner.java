@@ -16,7 +16,7 @@ public class PetOwner {
 
     @JsonIgnore
     @Cascade(org.hibernate.annotations.CascadeType.DELETE)
-    @OneToMany(mappedBy = "petowner", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "petOwner", fetch = FetchType.LAZY)
     private List<Pet> pets;
 
     @Id

@@ -17,8 +17,8 @@ public class Pet {
 
     @JsonIgnore
     @ManyToOne
-    @JoinColumn(name = "petowner_id", nullable = false)
-    private PetOwner petowner;
+    @JoinColumn(name = "pet_owner_id", nullable = false)
+    private PetOwner petOwner;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -34,7 +34,7 @@ public class Pet {
     public Pet(String name, String type, PetOwner petOwner){
         this.name = name;
         this.type = type;
-        this.petowner = petOwner;
+        this.petOwner = petOwner;
         this.bookings = new ArrayList<>();
     }
 
@@ -55,11 +55,11 @@ public class Pet {
     }
 
     public PetOwner getPetOwner() {
-        return petowner;
+        return petOwner;
     }
 
     public void setPetOwner(PetOwner petOwner) {
-        this.petowner = petOwner;
+        this.petOwner = petOwner;
     }
 
     public Long getId() {
@@ -68,14 +68,6 @@ public class Pet {
 
     public void setId(Long id) {
         Id = id;
-    }
-
-    public PetOwner getPetowner() {
-        return petowner;
-    }
-
-    public void setPetowner(PetOwner petowner) {
-        this.petowner = petowner;
     }
 
     public List<Booking> getBookings() {
