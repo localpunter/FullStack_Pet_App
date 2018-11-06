@@ -7,6 +7,9 @@ import BusinessContainer from './containers/businesses/BusinessContainer';
 import BusinessContainerServiceList from './containers/businesses/BusinessContainerServiceList';
 import BusinessContainerBookingList from './containers/businesses/BusinessContainerBookingList';
 import BusinessServiceFormContainer from './containers/businesses/BusinessServiceFormContainer';
+import PetOwnerContainerBookingList from './containers/petowners/PetOwnerContainerBookingList';
+import PetOwnerContainerPetList from './containers/petowners/PetOwnerContainerBookingList';
+import PetOwnerAddPetFormContainer from './containers/petowners/PetOwnerAddPetFormContainer';
 
 class App extends Component {
   render() {
@@ -20,6 +23,9 @@ class App extends Component {
           <Route exact path = '/businesses/servicelist' component={BusinessContainerServiceList}/>
           <Route exact path = '/businesses/bookinglist' component={BusinessContainerBookingList}/>
           <Route exact path = '/businesses/createservice' component={BusinessServiceFormContainer}/>
+          <Route exact path = '/businesses/bookinglist' component={PetOwnerContainerBookingList}/>
+          <Route exact path = '/petowners/petlist' component={PetOwnerContainerPetList}/>
+          <Route exact path = '/petowners/addpet' component={PetOwnerAddPetFormContainer}/>
         </Switch>
         </React.Fragment>
       </Router>

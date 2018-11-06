@@ -1,19 +1,21 @@
 import React from 'react';
 
-const ServiceForm = (props) => {
+const PetForm = (props) => {
   function handleSubmit(event) {
     event.preventDefault();
-    const service = {
+    const pet = {
       "type": event.target.type.value,
-      "business": "http://localhost:8080/api/businesses/1"
+      "name": event.target.name.value,
+      "petowner": "http://localhost:8080/api/petOwners/1"
     }
-    props.handleServicePost(service);
+    props.handlePetPost(pet);
 
   }
 
   return(
     <div>
     <form onSubmit={handleSubmit}>
+    <input type="text" placeholder="Name" name="name"/>
     <input type="text" placeholder="Type" name="type"/>
     <button type="submit">Save</button>
     </form>
@@ -21,4 +23,4 @@ const ServiceForm = (props) => {
   )
 }
 
-export default ServiceForm;
+export default PetForm;
