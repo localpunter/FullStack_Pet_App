@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import Request from '../../helpers/request.js';
+import NavBarPetOwnerContainer from '../../navbars/NavBarPetOwnerContainer';
 
 
-class PetOwnerContainerBookingList extends Component {
+class PetOwnerBookingListContainer extends Component {
   constructor(props) {
     super(props);
     this.state = { bookings: [] }
@@ -21,10 +22,10 @@ class PetOwnerContainerBookingList extends Component {
       <div>
         <NavBarPetOwnerContainer />
         <h2>Pet Owner Container Booking List</h2>
-        <PetOwnerBookingList bookings={this.state.bookings} />
+        {/* <PetOwnerBookingList bookings={this.state.bookings} /> */}
       </div>
     )
   }
 }
 
-export default PetOwnerContainerBookingList;
+export default PetOwnerBookingListContainer;
