@@ -3,7 +3,7 @@ import Request from '../../helpers/request.js';
 import NavBarPetOwnerContainer from '../../navbars/NavBarPetOwnerContainer.js';
 import PetOwnerPetList from '../../components/petowners/PetOwnerPetList';
 
-class PetOwnerContainerPetList extends Component {
+class PetOwnerPetListContainer extends Component {
   constructor(props) {
     super(props);
     this.state = { pets: [] }
@@ -27,4 +27,4 @@ class PetOwnerContainerPetList extends Component {
   }
 }
 
-export default PetOwnerContainerPetList;
+export default PetOwnerPetListContainer;
