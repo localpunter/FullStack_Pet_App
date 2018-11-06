@@ -18,7 +18,7 @@ public class Service {
     private Long id;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "service", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "service", fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
     private List<Booking> bookings;
 
     @Column(name = "type")
