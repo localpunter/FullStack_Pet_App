@@ -11,12 +11,18 @@ class SingleBusinessServiceContainer extends Component {
   }
 
   componentDidMount() {
-
+    let request = new Request()
+    const url = '/api/services/' + this.props.id + '?projection=embedService';
+    request.get(url).then((data) => {
+      this.setState({service: data})
+    })
   }
 
   render() {
+    console.log("props", this.props);
     return(
       <div>
+
       SingleBusinessServiceContainer!
       </div>
     )
