@@ -10,7 +10,7 @@ const Service = (props) => {
 
   return(
     <React.Fragment>
-      <Link to = {"/businesses/service/:id" + props.service.id} >
+      <Link to = {"/businesses/service/" + props.service.id} >
         <p>{props.service.type} </p>
         </Link>
     </React.Fragment>
