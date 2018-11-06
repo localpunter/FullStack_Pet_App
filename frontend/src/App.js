@@ -12,6 +12,7 @@ import BusinessServiceFormContainer from './containers/businesses/BusinessServic
 import SingleBusinessServiceContainer from './containers/businesses/SingleBusinessServiceContainer';
 import OwnerBookingListContainer from './containers/owners/OwnerBookingListContainer';
 import SingleOwnerPetContainer from './containers/owners/SingleOwnerPetContainer';
+import OwnerEditPetFormContainer from './containers/owners/OwnerEditPetFormContainer';
 
 class App extends Component {
   render() {
@@ -37,6 +38,11 @@ class App extends Component {
           <Route exact path="/owners/pet/:id" render = {(props) =>{
             const id = props.match.params.id;
             return <SingleOwnerPetContainer id = {id} />
+            }}
+          />
+          <Route exact path="/pets/edit/:id" render = {(props) =>{
+            const id = props.match.params.id;
+            return <OwnerEditPetFormContainer id = {id} />
             }}
           />
         </Switch>

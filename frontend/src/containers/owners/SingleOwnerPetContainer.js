@@ -20,7 +20,14 @@ componentDidMount() {
 }
 
 handleDelete(id) {
-  console.log('handleDelete called, id: ', id);
+  const request = new Request();
+  const url = '/api/pets/' + id;
+  request.delete(url).then(() => {
+    window.location = '/owners/petlist';
+  })
+}
+
+handleEdit(id) {
   const request = new Request();
   const url = '/api/pets/' + id;
   request.delete(url).then(() => {

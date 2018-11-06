@@ -3,12 +3,11 @@ import React from 'react';
 const OwnerPetDetails = (props) => {
 
   const onDelete = () => {
-    console.log('delete clicked, pet: ', props.pet);
     props.handleDelete(props.id);
   }
 
   const onEdit = () => {
-
+    window.location = '/pets/edit/' + props.id;
   }
 
   if (!props.pet) {
