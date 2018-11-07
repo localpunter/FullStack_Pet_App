@@ -8,7 +8,7 @@ const Booking = (props) => {
   }
 
   const onEdit = () => {
-
+    window.location = '/businesses/bookings/edit/' + props.booking.id;
   }
 
   if (!props.booking) {
