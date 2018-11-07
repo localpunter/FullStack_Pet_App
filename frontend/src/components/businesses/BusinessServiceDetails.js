@@ -5,7 +5,9 @@ import BusinessServiceList from '../businesses/BusinessServiceList.js';
 
 
 const BusinessServiceDetails = (props) => {
-console.log('delete clicked, service: ', props.pet);
+console.log('BusinessServiceDetails, props.service: ', props.service.id);
+
+
 const onDelete = () => {
   props.handleDelete(props.service.id)
 }
@@ -14,7 +16,7 @@ const onEdit = () => {
 
 }
 
-console.log(props);
+
   if(!props.service) {
     return null;
   }
