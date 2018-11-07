@@ -14,6 +14,7 @@ import OwnerBookingListContainer from './containers/owners/OwnerBookingListConta
 import SingleOwnerPetContainer from './containers/owners/SingleOwnerPetContainer';
 import OwnerEditPetFormContainer from './containers/owners/OwnerEditPetFormContainer';
 import BusinessEditServiceFormContainer from './containers/businesses/BusinessEditServiceFormContainer';
+import OwnerCreateBookingContainer from './containers/owners/OwnerCreateBookingContainer';
 
 
 class App extends Component {
@@ -32,6 +33,7 @@ class App extends Component {
           <Route exact path = '/owners/petlist' component={OwnerContainerPetList}/>
           <Route exact path = '/owners/addpet' component={OwnerAddPetFormContainer}/>
           <Route exact path = '/owners/bookinglist' component={OwnerBookingListContainer}/>
+          <Route exact path = '/owners/createbooking' component={OwnerCreateBookingContainer}/>
           <Route exact path="/businesses/service/:id" render = {(props) =>{
             const id = props.match.params.id;
             return <SingleBusinessServiceContainer id = {id} />
