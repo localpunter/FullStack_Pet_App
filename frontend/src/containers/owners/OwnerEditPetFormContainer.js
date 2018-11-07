@@ -23,7 +23,6 @@ class OwnerEditPetFormContainer extends Component {
   }
 
   handlePetPatch(pet, id) {
-    console.log('patch called');
     const request = new Request();
     request.patch('http://localhost:3000/api/pets/' + id, pet)
     .then(() => {

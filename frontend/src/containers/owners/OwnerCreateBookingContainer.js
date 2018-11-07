@@ -27,7 +27,6 @@ class OwnerCreateBookingContainer extends Component {
   }
 
   handleBookingPost(booking) {
-    console.log("Booking to post: ", booking);
     const request = new Request();
     request.post('http://localhost:3000/api/bookings', booking)
     .then(() => {

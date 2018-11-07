@@ -15,7 +15,6 @@ class BusinessBookingEditFormContainer extends Component {
   }
 
   componentDidMount() {
-    console.log("BusinessBookingEditFormContainer");
     const request = new Request();
       request.get('/api/bookings/' + this.props.id)
         .then((booking) => {
