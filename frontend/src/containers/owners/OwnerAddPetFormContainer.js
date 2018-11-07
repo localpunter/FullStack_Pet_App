@@ -30,10 +30,11 @@ class OwnerAddPetFormContainer extends Component {
   }
 
   handlePetPost(pet) {
+    console.log("pet to post: ", pet);
     const request = new Request();
     request.post('http://localhost:3000/api/pets', pet)
     .then(() => {
-      window.location = '/owners/petlist'
+      // window.location = '/owners/petlist'
     })
   }
 

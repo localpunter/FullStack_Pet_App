@@ -1,6 +1,7 @@
 package com.codeclan.example.PetApp.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 
@@ -14,12 +15,10 @@ public class Booking {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "pet_id", nullable = false)
     private Pet pet;
-
-    @JsonIgnore
+    
     @ManyToOne
     @JoinColumn(name = "service_id", nullable = false)
     private Service service;

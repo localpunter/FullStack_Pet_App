@@ -23,10 +23,6 @@ const onEdit = () => {
       <button onClick={onEdit}>Edit</button>
     </div>
   )
-
 }
-
-
-
 
 export default BusinessServiceDetails;

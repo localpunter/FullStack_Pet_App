@@ -14,6 +14,10 @@ const NavBarOwnerContainer = (props) => {
         </li>
 
         <li className="navLink">
+          <Link to="/owners/createbooking">Create Booking</Link>
+        </li>
+
+        <li className="navLink">
           <Link to="/owners/bookinglist">Show Bookings</Link>
         </li>
       </ul>
