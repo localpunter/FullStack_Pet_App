@@ -20,7 +20,7 @@ class OwnerPetListContainer extends Component {
     return(
       <div>
         <NavBarOwnerContainer />
-        <h2>Owner Container Service List</h2>
+        <h2>Owner Container Pet List</h2>
         <OwnerPetList pets={this.state.pets} />
       </div>
     )

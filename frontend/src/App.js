@@ -10,8 +10,11 @@ import BusinessServiceListContainer from './containers/businesses/BusinessServic
 import BusinessBookingListContainer from './containers/businesses/BusinessBookingListContainer';
 import BusinessServiceFormContainer from './containers/businesses/BusinessServiceFormContainer';
 import SingleBusinessServiceContainer from './containers/businesses/SingleBusinessServiceContainer';
-import OwnerBookingListContainer from './containers/owners/OwnerBookingListContainer';
+import OwnerBookingListContainer from './containers/owners/OwnerBookingListContainer'
+import SingleOwnerPetContainer from './containers/owners/SingleOwnerPetContainer';
+import OwnerEditPetFormContainer from './containers/owners/OwnerEditPetFormContainer';
 import BusinessEditServiceFormContainer from './containers/businesses/BusinessEditServiceFormContainer';
+
 
 class App extends Component {
   render() {
@@ -32,11 +35,18 @@ class App extends Component {
           <Route exact path="/businesses/service/:id" render = {(props) =>{
             const id = props.match.params.id;
             return <SingleBusinessServiceContainer id = {id} />
-            }}
-          />
+            }}/>
           <Route exact path="/services/edit/:id" render = {(props) =>{
             const id = props.match.params.id;
-            return <BusinessEditServiceFormContainer id = {id} />
+            return <BusinessEditServiceFormContainer id = {id} /> }} />
+          <Route exact path="/owners/pet/:id" render = {(props) =>{
+            const id = props.match.params.id;
+            return <SingleOwnerPetContainer id = {id} />
+            }}
+          />
+          <Route exact path="/pets/edit/:id" render = {(props) =>{
+            const id = props.match.params.id;
+            return <OwnerEditPetFormContainer id = {id} />
             }}
           />
         </Switch>
