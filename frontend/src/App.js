@@ -11,6 +11,7 @@ import BusinessBookingListContainer from './containers/businesses/BusinessBookin
 import BusinessServiceFormContainer from './containers/businesses/BusinessServiceFormContainer';
 import SingleBusinessServiceContainer from './containers/businesses/SingleBusinessServiceContainer';
 import OwnerBookingListContainer from './containers/owners/OwnerBookingListContainer';
+import BusinessEditServiceFormContainer from './containers/businesses/BusinessEditServiceFormContainer';
 
 class App extends Component {
   render() {
@@ -31,6 +32,11 @@ class App extends Component {
           <Route exact path="/businesses/service/:id" render = {(props) =>{
             const id = props.match.params.id;
             return <SingleBusinessServiceContainer id = {id} />
+            }}
+          />
+          <Route exact path="/services/edit/:id" render = {(props) =>{
+            const id = props.match.params.id;
+            return <BusinessEditServiceFormContainer id = {id} />
             }}
           />
         </Switch>

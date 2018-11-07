@@ -18,6 +18,7 @@ public class Service {
     private Long id;
 
     @JsonIgnore
+    @Cascade(org.hibernate.annotations.CascadeType.DELETE)
     @OneToMany(mappedBy = "service", fetch = FetchType.LAZY)
     private List<Booking> bookings;
 
@@ -25,8 +26,8 @@ public class Service {
     private String type;
 
     @JsonIgnoreProperties("services")
+//    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
     @ManyToOne
-//    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)   ??? REQUIRED
     @JoinColumn(name = "business_id", nullable = false)
     Business business;
 
