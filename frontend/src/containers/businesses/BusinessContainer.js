@@ -26,7 +26,7 @@ class BusinessContainer extends Component {
 
     return(
       <div>
-        <h2>Hello {businessName}</h2>
+        {/* <h2>Hello {businessName}</h2>*/}
         <NavBarBusinessContainer />
       </div>
     )

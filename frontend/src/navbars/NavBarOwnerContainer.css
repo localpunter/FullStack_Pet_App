@@ -1,0 +1,23 @@
+.owner-nav-bar {
+  text-align: center;
+}
+.owner-nav-bar > li {
+  display: inline-block;
+  padding: 0.8em;
+  text-transform: uppercase;
+  border: 2px solid gray;
+  border-radius: 1em;
+  margin: 0.5em;
+  width: 15%;
+  text-align: center;
+  background-color: whitesmoke;
+  font-weight: bold;
+}
+.owner-nav-bar > li:hover {
+  cursor: pointer;
+  border: 2px solid black;
+  background-color: white;
+}
+.owner-nav-bar > li > a {
+    text-decoration: none;
+}

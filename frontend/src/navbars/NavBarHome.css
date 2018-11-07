@@ -1,0 +1,41 @@
+.nav-selected {
+  background-color: palegreen !important;
+}
+.main-nav-bar > li {
+  display: inline-block;
+  padding: 0.8em;
+  text-transform: uppercase;
+  border: 2px solid gray;
+  border-radius: 1em;
+  margin: 0.5em 2em;
+  font-weight: bold;
+  width: 20%;
+  background-color: lightgray;
+}
+.main-nav-bar > li:hover {
+  cursor: pointer;
+  border: 2px solid black;
+  background-color: white;
+}
+.main-nav-bar > li > a {
+  text-decoration: none;
+}
+#logo {
+  font-size: 1.2em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 15%;
+  font-family: Impact;
+  margin: 0.6em 1em 0;
+  text-shadow: 0.1em 0.1em lightgray;
+  border: 2px solid lightgray;
+  border-radius: 50%;
+  background-color: white;
+  text-transform: uppercase;
+}
+#logo:hover {
+  cursor: pointer;
+  border: 2px solid black;
+  background-color: white;
+}

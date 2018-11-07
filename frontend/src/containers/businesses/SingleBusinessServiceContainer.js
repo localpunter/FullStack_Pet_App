@@ -36,7 +36,7 @@ this.handleDelete = this.handleDelete.bind(this)
     return(
       <div>
 
-      SingleBusinessServiceContainer!
+      <NavBarBusinessContainer />
         <BusinessServiceDetails service = {this.state.service} handleDelete = {this.handleDelete} />
 
       </div>

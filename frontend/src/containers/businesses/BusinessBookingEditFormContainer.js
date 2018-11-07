@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Request from '../../helpers/request.js';
-
+import NavBarBusinessContainer from '../../navbars/NavBarBusinessContainer.js';
 import BookingEditForm from '../../components/businesses/BookingEditForm.js';
 
 
@@ -35,7 +35,7 @@ class BusinessBookingEditFormContainer extends Component {
 
     return(
       <div>
-        Test
+        <NavBarBusinessContainer />
         <BookingEditForm booking={this.state.booking} handleBookingPatch={this.handleBookingPatch}/>
       </div>
     )}

@@ -1,10 +1,11 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import './NavBarOwnerContainer.css';
 
 const NavBarOwnerContainer = (props) => {
   return (
     <header>
-      <ul>
+      <ul className="owner-nav-bar">
       <li className="navLink">
         <Link to="/owners/addpet">Add Pet</Link>
       </li>

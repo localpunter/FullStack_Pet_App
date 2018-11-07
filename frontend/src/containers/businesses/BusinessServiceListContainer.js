@@ -16,7 +16,7 @@ class BusinessServiceListContainer extends Component {
       })
     }
 
-    
+
 
   render() {
     return(

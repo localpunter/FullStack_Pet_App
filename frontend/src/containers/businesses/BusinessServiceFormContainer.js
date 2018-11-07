@@ -36,6 +36,7 @@ class BusinessServiceFormContainer extends Component {
 
     return(
       <div>
+      <NavBarBusinessContainer />
       <ServiceForm
       services = {this.state.services}
       businesses={this.state.businesses}

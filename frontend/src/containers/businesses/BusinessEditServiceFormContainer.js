@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Request from '../../helpers/request.js';
 import PetEditForm from '../../components/businesses/ServiceEditForm.js';
 import ServiceEditForm from '../../components/businesses/ServiceEditForm.js';
+import NavBarBusinessContainer from '../../navbars/NavBarBusinessContainer.js';
 
 class BusinessEditServiceFormContainer extends Component {
   constructor(props) {
@@ -34,6 +35,7 @@ class BusinessEditServiceFormContainer extends Component {
 
     return(
       <div>
+        <NavBarBusinessContainer />
         <ServiceEditForm service={this.state.service} handleServicePatch={this.handleServicePatch}/>
       </div>
     )}
