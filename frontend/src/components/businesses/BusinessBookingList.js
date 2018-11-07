@@ -6,7 +6,7 @@ const BusinessBookingList = (props) => {
     return (
       <li key={booking.id}>
       <div>
-      <Booking booking={booking} />
+      <Booking booking={booking} handleDelete={props.handleDelete} />
       </div>
       </li>
     )

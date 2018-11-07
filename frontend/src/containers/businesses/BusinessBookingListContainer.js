@@ -7,6 +7,7 @@ class BusinessBookingListContainer extends Component {
   constructor(props) {
     super(props);
     this.state = { bookings: [] }
+    this.handleDelete = this.handleDelete.bind(this)
   }
 
   componentDidMount() {
@@ -16,13 +17,21 @@ class BusinessBookingListContainer extends Component {
       })
     }
 
+    handleDelete(id) {
+      const request = new Request();
+      const url = '/api/bookings/' + id;
+      request.delete(url).then(() => {
+        window.location = '/businesses/bookinglist'
+      })
+    }
+
   render() {
 
     return (
       <div>
         <NavBarBusinessContainer />
         <h2>Business Container Booking List</h2>
-        <BusinessBookingList bookings={this.state.bookings} />
+        <BusinessBookingList bookings={this.state.bookings} handleDelete={this.handleDelete}/>
       </div>
     )
   }

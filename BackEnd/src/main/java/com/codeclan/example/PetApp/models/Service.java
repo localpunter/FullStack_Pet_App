@@ -44,6 +44,11 @@ public class Service {
         return id;
     }
 
+
+    /**
+     * this sets id:
+     * @param id
+     */
     public void setId(Long id) {
         this.id = id;
     }
