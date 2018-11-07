@@ -5,7 +5,6 @@ import BusinessServiceList from '../businesses/BusinessServiceList.js';
 
 
 const BusinessServiceDetails = (props) => {
-console.log('BusinessServiceDetails, props.service: ', props.service.id);
 
 
 const onDelete = () => {

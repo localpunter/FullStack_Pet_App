@@ -7,8 +7,6 @@ const Booking = (props) => {
     return null;
   }
 
-  console.log("pet owner: ", props);
-
   return(
     <React.Fragment>
       <p>ID: {props.booking.id}</p>

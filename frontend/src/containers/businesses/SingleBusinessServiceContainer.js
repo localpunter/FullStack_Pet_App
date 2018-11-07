@@ -25,15 +25,12 @@ this.handleDelete = this.handleDelete.bind(this)
 
     const request = new Request();
     const url = '/api/services/' + id;
-    console.log('handleDelete url:', url);
     request.delete(url).then(() => {
-      // window.location = '/businesses/servicelist'
-
+      window.location = '/businesses/servicelist'
     })
   }
 
   render() {
-    console.log("props", this.props);
     if(!this.state.service){
       return null;
     }
