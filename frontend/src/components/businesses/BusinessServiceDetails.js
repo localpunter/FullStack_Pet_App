@@ -2,8 +2,6 @@ import React  from 'react';
 import BusinessServiceFormContainer from '../../containers/businesses/BusinessServiceFormContainer.js';
 import BusinessServiceList from '../businesses/BusinessServiceList.js';
 
-
-
 const BusinessServiceDetails = (props) => {
 
 
@@ -12,7 +10,7 @@ const onDelete = () => {
 }
 
 const onEdit = () => {
-
+  window.location = '/services/edit/' + props.service.id;
 }
 
 

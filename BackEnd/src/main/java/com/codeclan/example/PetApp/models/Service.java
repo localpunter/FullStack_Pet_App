@@ -26,7 +26,7 @@ public class Service {
     private String type;
 
     @JsonIgnoreProperties("services")
-    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
+//    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
     @ManyToOne
     @JoinColumn(name = "business_id", nullable = false)
     Business business;

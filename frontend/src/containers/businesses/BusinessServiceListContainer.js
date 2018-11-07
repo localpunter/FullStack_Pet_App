@@ -15,8 +15,8 @@ class BusinessServiceListContainer extends Component {
         this.setState({services: services._embedded.services})
       })
     }
+    
   render() {
-
     return(
       <div>
         <NavBarBusinessContainer />

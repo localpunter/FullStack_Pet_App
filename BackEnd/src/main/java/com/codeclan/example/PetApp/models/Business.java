@@ -19,7 +19,7 @@ public class Business {
     private String name;
 
     @JsonIgnore
-    @Cascade(org.hibernate.annotations.CascadeType.REMOVE)
+//    @Cascade(org.hibernate.annotations.CascadeType.REMOVE)
     @OneToMany(mappedBy = "business", fetch = FetchType.LAZY)
     private List<Service> serviceList;
 

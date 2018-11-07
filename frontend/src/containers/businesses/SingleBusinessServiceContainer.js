@@ -22,7 +22,6 @@ this.handleDelete = this.handleDelete.bind(this)
   }
 
   handleDelete(id) {
-
     const request = new Request();
     const url = '/api/services/' + id;
     request.delete(url).then(() => {
