@@ -17,18 +17,7 @@ class OwnerContainer extends Component {
       this.setState({owners: owners._embedded.owners})
     })
   }
-  //   .then(() => {
-  //     request.get('/api/pets').then((pets) => {
-  //       this.setState({pets: pets._embedded.pets})
-  //     })
-  // }
 
-  // handlePetPost(pet) {
-  //   const request = new Request();
-  //   request.post('api/owners', pet).then(() => {
-  //     window.location = '/owners/petlist'
-  //   })
-  // }
 
   render() {
     let ownerName = null;
@@ -36,8 +25,8 @@ class OwnerContainer extends Component {
 
 
     return(
-      <div>
-        <h2>Hello {ownerName}</h2>
+      <div className="section-div">
+        {/*<h2>Hello {ownerName}</h2>*/}
         <NavBarOwnerContainer />
       </div>
     )

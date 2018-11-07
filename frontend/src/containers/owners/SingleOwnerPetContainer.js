@@ -40,7 +40,11 @@ render() {
     return null;
   }
   return(
-    <OwnerPetDetails pet={this.state.pet} id={this.props.id} handleDelete={this.handleDelete} />
+    <div className="section-div">
+      <NavBarOwnerContainer />
+      <h3>Pet Details</h3>
+      <OwnerPetDetails pet={this.state.pet} id={this.props.id} handleDelete={this.handleDelete} />
+    </div>
   )
 }
 }

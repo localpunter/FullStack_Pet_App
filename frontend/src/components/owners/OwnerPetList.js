@@ -11,7 +11,7 @@ const OwnerPetList = (props) => {
       </li>
     )
   })
-  return (<ul>{pets}</ul>)
+  return (<ul className='list-output'>{pets}</ul>)
 }
 
 

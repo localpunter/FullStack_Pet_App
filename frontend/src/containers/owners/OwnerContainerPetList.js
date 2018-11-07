@@ -18,9 +18,9 @@ class OwnerPetListContainer extends Component {
   render() {
 
     return(
-      <div>
+      <div className="section-div">
         <NavBarOwnerContainer />
-        <h2>Owner Container Pet List</h2>
+        <h3>Pet List</h3>
         <OwnerPetList pets={this.state.pets} />
       </div>
     )

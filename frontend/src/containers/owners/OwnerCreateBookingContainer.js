@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Request from '../../helpers/request.js';
 import BookingForm from '../../components/owners/BookingForm';
+import NavBarOwnerContainer from '../../navbars/NavBarOwnerContainer.js';
 
 class OwnerCreateBookingContainer extends Component {
   constructor(props) {
@@ -37,8 +38,9 @@ class OwnerCreateBookingContainer extends Component {
   render() {
 
     return(
-      <div>
-        <h2>Create Booking</h2>
+      <div className="section-div">
+        <NavBarOwnerContainer />
+        <h3>Create Booking</h3>
         <BookingForm
           pets = {this.state.pets}
           services = {this.state.services}

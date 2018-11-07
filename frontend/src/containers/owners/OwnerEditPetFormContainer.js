@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Request from '../../helpers/request.js';
-// import NavBarBusinessContainer from '../../navbars/NavBarOwnerContainer.js';
+import NavBarOwnerContainer from '../../navbars/NavBarOwnerContainer.js';
 import PetEditForm from '../../components/owners/PetEditForm.js';
 
 class OwnerEditPetFormContainer extends Component {
@@ -33,7 +33,8 @@ class OwnerEditPetFormContainer extends Component {
   render() {
 
     return(
-      <div>
+      <div className="section-div">
+        <NavBarOwnerContainer />
         <PetEditForm pet={this.state.pet} id={this.props.id} handlePetPatch={this.handlePetPatch}/>
       </div>
     )}

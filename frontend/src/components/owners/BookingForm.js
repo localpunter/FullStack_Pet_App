@@ -25,16 +25,19 @@ const BookingForm = (props) => {
   return(
     <div>
     <form onSubmit={handleSubmit}>
+      <label htmlFor="pet">Pet: </label>
       <select defaultValue="defaultPet" name="pet">
         <option disabled value="defaultPet">Select a pet...</option>
         {petOptions}
-      </select>
+      </select><br/>
+      <label htmlFor="service">Service: </label>
       <select defaultValue="defaultService" name="service">
         <option disabled value="defaultService">Select a service...</option>
         {serviceOptions}
-      </select>
+      </select><br/>
+      <label htmlFor="date">Date: </label>
       <input type="text" placeholder="DD/MM/YYYY" name="date"/>
-      <input type="submit" value="Save"/>
+      <input type="submit" className="input-submit" value="Save"/>
     </form>
     </div>
   )

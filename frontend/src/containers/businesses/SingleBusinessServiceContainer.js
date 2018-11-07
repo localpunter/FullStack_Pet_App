@@ -34,11 +34,10 @@ this.handleDelete = this.handleDelete.bind(this)
       return null;
     }
     return(
-      <div>
-
-      <NavBarBusinessContainer />
+      <div className="section-div">
+        <NavBarBusinessContainer />
+        <h3>Service Details</h3>
         <BusinessServiceDetails service = {this.state.service} handleDelete = {this.handleDelete} />
-
       </div>
     )
   }

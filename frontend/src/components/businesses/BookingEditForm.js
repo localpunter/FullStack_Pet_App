@@ -21,7 +21,7 @@ const BookingEditForm = (props) => {
       <h3>Amend Booking Date</h3>
       <form onSubmit={handleSubmit}>
         <label htmlFor="date">Date: </label> <input type="text" defaultValue={props.booking.date} name="date"/>
-        <input type="submit" value="Save"/>
+        <input type="submit" className="input-submit" value="Save"/>
       </form>
     </div>
   )

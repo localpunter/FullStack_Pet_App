@@ -16,7 +16,7 @@ const OwnerPetDetails = (props) => {
 
   return (
     <div>
-      <p>Pet Name: {props.pet.name}</p>
+      <p className="para-details">Pet Name: {props.pet.name}</p>
       <button onClick={onDelete}>Delete</button>
       <button onClick={onEdit}>Edit</button>
     </div>

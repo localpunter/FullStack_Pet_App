@@ -19,9 +19,9 @@ class OwnerBookingListContainer extends Component {
   render() {
 
     return (
-      <div>
+      <div className="section-div">
         <NavBarOwnerContainer />
-        <h2>Owner Container Booking List</h2>
+        <h3>Booking List</h3>
         <OwnerBookingList bookings={this.state.bookings} />
       </div>
     )

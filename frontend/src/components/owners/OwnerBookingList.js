@@ -11,7 +11,7 @@ const OwnerBookingList = (props) => {
       </li>
     )
   })
-  return (<ul>{bookings}</ul>)
+  return (<ul className="list-output">{bookings}</ul>)
 }
 
 

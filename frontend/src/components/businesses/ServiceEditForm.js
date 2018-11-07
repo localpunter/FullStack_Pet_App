@@ -20,7 +20,7 @@ const ServiceEditForm = (props) => {
     <form onSubmit={handleSubmit}>
       <label htmlFor="type"/>
       <input type="text" defaultValue={props.service.type} name="type"/>
-      <input type="submit" value="Save"/>
+      <input type="submit" className="input-submit" value="Save"/>
     </form>
     </div>
   )
