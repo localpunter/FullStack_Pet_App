@@ -15,10 +15,12 @@ const ServiceEditForm = (props) => {
     return null;
   }
   return(
-    <div>
+    <div className="section-div">
+    <h3>Amend Service</h3>
     <form onSubmit={handleSubmit}>
+      <label htmlFor="type"/>
       <input type="text" defaultValue={props.service.type} name="type"/>
-      <button type="submit">Save</button>
+      <input type="submit" value="Save"/>
     </form>
     </div>
   )

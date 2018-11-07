@@ -18,7 +18,7 @@ const onEdit = () => {
     return null;
   }
   return (
-    <div><p>Type: {props.service.type}</p>
+    <div className="section-div"><p>Type: {props.service.type}</p>
       <button onClick={onDelete}>Delete</button>
       <button onClick={onEdit}>Edit</button>
     </div>

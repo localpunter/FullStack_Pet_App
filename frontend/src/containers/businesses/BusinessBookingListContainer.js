@@ -28,9 +28,9 @@ class BusinessBookingListContainer extends Component {
   render() {
 
     return (
-      <div>
+      <div className="section-div">
         <NavBarBusinessContainer />
-        <h2>Business Container Booking List</h2>
+        <h3>Booking List</h3>
         <BusinessBookingList bookings={this.state.bookings} handleDelete={this.handleDelete}/>
       </div>
     )

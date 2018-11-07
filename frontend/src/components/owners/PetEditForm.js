@@ -20,7 +20,7 @@ const PetEditForm = (props) => {
     <form onSubmit={handleSubmit}>
       <input type="text" defaultValue={props.pet.name} name="name"/>
       <input type="text" defaultValue={props.pet.type} name="type"/>
-      <button type="submit">Save</button>
+      <input type="submit" value="Save"/>
     </form>
     </div>
   )

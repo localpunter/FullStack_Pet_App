@@ -17,7 +17,7 @@ const PetForm = (props) => {
     <form onSubmit={handleSubmit}>
       <input type="text" placeholder="Name" name="name"/>
       <input type="text" placeholder="Type" name="type"/>
-      <button type="submit">Save</button>
+      <input type="submit" value="Save"/>
     </form>
     </div>
   )

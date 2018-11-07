@@ -34,7 +34,7 @@ class BusinessBookingEditFormContainer extends Component {
   render() {
 
     return(
-      <div>
+      <div className="section-div">
         <NavBarBusinessContainer />
         <BookingEditForm booking={this.state.booking} handleBookingPatch={this.handleBookingPatch}/>
       </div>

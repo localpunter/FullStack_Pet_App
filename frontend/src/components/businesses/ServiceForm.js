@@ -12,11 +12,12 @@ const ServiceForm = (props) => {
   }
 
   return(
-    <div>
-    <form onSubmit={handleSubmit}>
-    <input type="text" placeholder="Type" name="type"/>
-    <button type="submit">Save</button>
-    </form>
+    <div className="section-div">
+      <form onSubmit={handleSubmit}>
+      <label htmlFor="type">Type: </label>
+      <input type="text" placeholder="Type" name="type"/>
+      <input type="submit" className="input-submit" value="Save"/>
+      </form>
     </div>
   )
 }

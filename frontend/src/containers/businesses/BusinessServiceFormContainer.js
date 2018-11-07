@@ -35,13 +35,14 @@ class BusinessServiceFormContainer extends Component {
   render() {
 
     return(
-      <div>
-      <NavBarBusinessContainer />
-      <ServiceForm
-      services = {this.state.services}
-      businesses={this.state.businesses}
-      handleServicePost={this.handleServicePost}
-      />
+      <div className="section-div">
+        <NavBarBusinessContainer />
+        <h3>Create New Service</h3>
+        <ServiceForm
+        services = {this.state.services}
+        businesses={this.state.businesses}
+        handleServicePost={this.handleServicePost}
+        />
       </div>
     )}
 

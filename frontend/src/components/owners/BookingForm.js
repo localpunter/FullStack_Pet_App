@@ -34,7 +34,7 @@ const BookingForm = (props) => {
         {serviceOptions}
       </select>
       <input type="text" placeholder="DD/MM/YYYY" name="date"/>
-      <button type="submit">Save</button>
+      <input type="submit" value="Save"/>
     </form>
     </div>
   )

@@ -11,7 +11,7 @@ const BusinessServiceList = (props) => {
       </li>
     )
   })
-  return (<ul>{services}</ul>)
+  return (<ul className="list-output">{services}</ul>)
 }
 
 

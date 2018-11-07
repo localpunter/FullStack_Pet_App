@@ -20,9 +20,9 @@ class BusinessServiceListContainer extends Component {
 
   render() {
     return(
-      <div>
+      <div className="section-div">
         <NavBarBusinessContainer />
-        <h2>Business Container Service List</h2>
+        <h3>Service List</h3>
         <BusinessServiceList services={this.state.services} />
       </div>
     )

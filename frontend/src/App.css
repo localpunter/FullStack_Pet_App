@@ -6,8 +6,69 @@
 }
 form {
   margin: 1em;
-  font-size: 2em;
+  padding: 1em;
 }
 form > input {
   margin: 0.5em;
+  font-size: 1.2em;
+  border-radius: 5px;
+}
+form > label {
+  font-size: 1.2em;
+}
+.input-submit {
+  margin: 0.5em;
+  padding: 0.5em;
+  -webkit-appearance: button;
+  font-size: 1em;
+}
+input[type=submit]:hover {
+  cursor: pointer;
+}
+button {
+  color: -webkit-link;
+  padding: 0.4em;
+  border-radius: 0.5em;
+  font-size: 1em;
+  width: 15%;
+  margin: 0.5em;
+  background-color: whitesmoke;
+  border: 2px solid gray;
+  font-weight: bold;
+}
+button:hover {
+  cursor: pointer;
+  background-color: white;
+  border: 2px solid black;
+}
+.list-output {
+  list-style-type: none;
+}
+.list-output > li {
+  margin: 1em 0;
+  border: 2px solid gray;
+  padding: 0.2em 2em;
+  border-radius: 1em;
+  text-transform: uppercase;
+  width: 80%;
+  font-weight: bold;
+  background-color: lightblue;
+  text-align: center;
+}
+.list-output a {
+  text-decoration: none;
+}
+.section-div {
+  margin: 2em auto;
+  width: 80%;
+}
+.section-div > p {
+  margin: 1em 0;
+  border: 2px solid gray;
+  padding: 0.5em 2em;
+  border-radius: 1em;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: lightblue;
+  text-align: center;
 }
